@@ -1,0 +1,21 @@
+pipeline {
+    agent any // Runs on any available Jenkins agent
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building application...'
+                // sh 'mvn clean install' // Example shell command
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to production...'
+            }
+        }
+    }
+}
